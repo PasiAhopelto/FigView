@@ -22,9 +22,14 @@
     <![endif]-->
 
     <div class="container">
-        <ng-include src="'views/search.html'"></ng-include>
-        <!-- Left (30%): search by tag -->
-        <!-- Right (70%): search results -->
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ng-include src="'views/search.html'"></ng-include>
+            </div>
+            <div class="col-sm-9 col-md-10 main">
+                <ng-include src="'views/pictures.html'"></ng-include>
+            </div>
+        </div>
     </div>
 
     <!-- build:js(.) scripts/vendor.js -->
