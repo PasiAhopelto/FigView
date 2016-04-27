@@ -1,12 +1,3 @@
-'use strict';
-
-/**
- * @ngdoc overview
- * @name figViewApp
- * @description
- * # figViewApp
- *
- * Main module of the application.
- */
+/*global angular*/
 angular
-  .module('figViewApp', []);
+    .module('figViewApp', []);

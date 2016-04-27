@@ -1,21 +1,23 @@
-'use strict';
+describe('SearchCtrl', function () {
+    'use strict';
+    
+    beforeEach(module('figViewApp'));
 
-describe('Controller: MainCtrl', function () {
-
-  // load the controller's module
-  beforeEach(module('figViewApp'));
-
-  var SearchCtrl,
-    scope;
-
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    SearchCtrl = $controller('SearchCtrl', {
-      $scope: scope
+    var $scope;
+    var $controller;
+    
+    beforeEach(inject(function(_$controller_, $rootScope) {
+        $controller = _$controller_;
+        $scope = $rootScope.$new();
+    }));
+    
+    describe('$scope.tab', function() {
+        it('tab is 1 (dummy test)', function() {
+            var $scope = {};
+            $controller('SearchCtrl', { $scope: $scope });
+            console.error($scope.tab);
+            expect($scope.tab).toEqual(1);
+        });
     });
-  }));
-
-  it('space holder', function () {
-  });
+    
 });
